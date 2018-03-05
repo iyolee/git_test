@@ -27,6 +27,9 @@ git status -s
 ```
 
 ### git commit
+```
+重新提交 git commit --amend
+```
 
 ### git rm
 ```
