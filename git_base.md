@@ -5,3 +5,5 @@
 
 ### git status -s
 ### git diff
+
+### git diff --staged
