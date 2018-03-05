@@ -51,3 +51,13 @@ git add README.md
 每个提交的简要统计信息 git log --stat
 美化输出格式 git log --pretty=oneline
 ```
+
+### git reset
+```
+移出暂存区 git reset HEAD README.md
+```
+
+### git checkout
+```
+撤销对文件的修改 git checkout -- <filename>
+```
