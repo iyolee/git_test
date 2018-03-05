@@ -29,6 +29,21 @@ git status -s
 ### git commit
 ```
 重新提交 git commit --amend
+
+commit message
+格式： <type>(<scope>): <subject>
+1. type-提交commit的类型
+- feat: 新功能
+- fix: 修复问题
+- docs: 修改文档
+- style: 修改代码样式，不影响代码逻辑
+- refactor: 重构代码，理论上不影响现有功能
+- perf: 提升性能
+- test: 增加修改测试用例
+- chore: 修改工具相关（包括但不限于文档，代码生成等）
+- deps: 依赖升级
+2. scope-修改文件的范围，可选，包括但不限于doc、plugins等
+3. subject-用一句话清楚的描述这次提交做了什么
 ```
 
 ### git rm
@@ -60,4 +75,21 @@ git add README.md
 ### git checkout
 ```
 撤销对文件的修改 git checkout -- <filename>
+```
+
+### git tag
+```
+创建注释标签 git tag -a v1.0.0 -m "my version 1.0.0"
+查看标签 git tag
+```
+
+### 分支
+```
+创建分支 git branch testing
+切换分支 git checkout testing
+相当于 git checkout -b testing
+
+合并 git merge testing
+
+删除分支 git branch -d testing
 ```
