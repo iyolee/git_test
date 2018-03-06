@@ -89,6 +89,13 @@ git add README.md
 (HEAD~1即相当于HEAD^都指的是HEAD的上一次提交)
 ```
 
+### git rebase 及一些规则
+- 不使用 git pull 与 git merge。（git pull = git fetch + git merge）
+- commit之后发现，远程 develop 分支已经有其他人已经commit并合并了。 那你应该在你的分支上：
+    - git fetch
+    - git rebase -i origin/develop
+- 可以对你开发的分支进行各种操作 以及pull -f，但禁止直接操作 develop
+
 ### git stash
 ```
 保存工作进度 git stash
