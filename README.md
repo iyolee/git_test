@@ -15,6 +15,10 @@ git config --global user.name "lee"
 git config --global user.email zhongjianlee@git.com
 ```
 ### git add 
+```
+将(被版本库追踪的)本地文件的变更(修改、删除)全部记录到暂存区中 git add -u
+将工作区中的所有改动及新增文件添加到暂存区 git add -A
+```
 
 ### git status
 ```
@@ -66,24 +70,42 @@ git add README.md
 ```
 最近两次提交引入的差异 git log -p -2
 每个提交的简要统计信息 git log --stat
-美化输出格式 git log --pretty=oneline
+美化输出格式 git log --pretty=oneline    git log --oneline
 ```
 
 ### git reset
 ```
-移出暂存区 git reset HEAD README.md
+移出暂存区(git add反向操作) git reset HEAD README.md  git reset --soft HEAD^
 上一个提交 git reset --hard HEAD^
+任意一次提交 git reset--hard 9e8a761
+查询到最早的提交ID git log --graph --oneline
+工作区不改变,但是暂存区会回退到上一次提交之前,引用也会回退一次 git reset --mixed HEAD^
 ```
 
 ### git checkout
 ```
 撤销对文件的修改 git checkout -- <filename>
+恢复删除的文件 git checkout HEAD~1 -- welcome.txt
+(HEAD~1即相当于HEAD^都指的是HEAD的上一次提交)
+```
+
+### git stash
+```
+保存工作进度 git stash
+显示进度列表 git stash list
+恢复 git stash apply
 ```
 
 ### git tag
 ```
 创建注释标签 git tag -a v1.0.0 -m "my version 1.0.0"
 查看标签 git tag
+```
+
+### git reflog
+```
+master分支指向的变迁 git reflog show master|head -5
+重置master为两次改变之前的值 git reset--hard master@{2}
 ```
 
 ### 分支
