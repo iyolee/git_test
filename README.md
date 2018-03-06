@@ -72,6 +72,7 @@ git add README.md
 ### git reset
 ```
 移出暂存区 git reset HEAD README.md
+上一个提交 git reset --hard HEAD^
 ```
 
 ### git checkout
