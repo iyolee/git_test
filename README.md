@@ -93,3 +93,6 @@ git add README.md
 
 删除分支 git branch -d testing
 ```
+
+### 其他
+- 避免https每次手动输密码 git config --global credential.helper cache
