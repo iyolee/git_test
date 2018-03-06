@@ -24,6 +24,8 @@ git status -s
 ```
 查看尚未添加到暂存区的变更 git diff
 查看已暂存的内容会进入到下一次提交 git diff --staged
+暂存区和HEAD比较 git diff --cached
+工作区和HEAD比较 git diff HEAD
 ```
 
 ### git commit
